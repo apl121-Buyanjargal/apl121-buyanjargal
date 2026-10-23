@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="bd1"/>
+        <attribute name="authors" value="Dell"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-10-23 10:40:47 PM"/>
+        <attribute name="created" value="RGVsbDtERVNLVE9QLU5PRkoxSzg7MjAyNi0xMC0yMzswNToyNDowNSBQTTsyNzI1"/>
+        <attribute name="edited" value="RGVsbDtERVNLVE9QLU5PRkoxSzg7MjAyNi0xMC0yMzsxMDo0MDo0NyBQTTsxOzI4MzM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="day" type="Integer" array="False" size=""/>
+            <declare name="temp" type="Real" array="False" size=""/>
+            <declare name="fahrenheit" type="Real" array="False" size=""/>
+            <declare name="minTemp" type="Real" array="False" size=""/>
+            <declare name="coldestDay" type="Integer" array="False" size=""/>
+            <declare name="category" type="String" array="False" size=""/>
+            <declare name="advice" type="String" array="False" size=""/>
+            <call expression="ShowTitle"/>
+            <output expression="&quot;Day | Celsius | Fahrenheit | Category | Advice&quot;" newline="True"/>
+            <for variable="day" start="1" end="7" direction="inc" step="1">
+                <do expression="temp &lt; -60 || temp &gt; 50">
+                    <input variable="temp"/>
+                </do>
+                <if expression="day == 1">
+                    <then>
+                        <assign variable="minTemp" expression="temp"/>
+                        <assign variable="coldestDay" expression="day"/>
+                    </then>
+                    <else>
+                        <if expression="temp &lt; minTemp">
+                            <then>
+                                <assign variable="minTemp" expression="temp"/>
+                                <assign variable="coldestDay" expression="day"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </else>
+                </if>
+                <assign variable="fahrenheit" expression="temp * 9 / 5 + 32"/>
+                <if expression="temp &gt;= 0">
+                    <then>
+                        <assign variable="category" expression="&quot;&#1044;&#1091;&#1083;&#1072;&#1072;&#1093;&#1072;&#1085;&quot;"/>
+                        <assign variable="advice" expression="&quot;&#1053;&#1080;&#1084;&#1075;&#1101;&#1085;&#1094;&#1072;&#1084;&#1094;&#1257;&#1084;&#1089;&#1257;&#1093;&quot;"/>
+                    </then>
+                    <else>
+                        <if expression="temp &gt;= -10">
+                            <then>
+                                <assign variable="category" expression="&quot;&#1057;&#1101;&#1088;&#1199;&#1199;&#1093;&#1101;&#1085;&quot;"/>
+                                <assign variable="advice" expression="&quot;&#1044;&#1091;&#1083;&#1072;&#1072;&#1085;&#1094;&#1072;&#1084;&#1094;&#1257;&#1084;&#1089;&#1257;&#1093;&quot;"/>
+                            </then>
+                            <else>
+                                <if expression="temp &gt;= -20">
+                                    <then>
+                                        <assign variable="category" expression="&quot;&#1061;&#1199;&#1081;&#1090;&#1101;&#1085;&quot;"/>
+                                        <assign variable="advice" expression="&quot;&#1061;&#1199;&#1088;&#1101;&#1084;&#1257;&#1084;&#1089;&#1257;&#1093;&quot;"/>
+                                    </then>
+                                    <else>
+                                        <if expression="temp &gt;= -30">
+                                            <then>
+                                                <assign variable="category" expression="&quot;&#1052;&#1072;&#1096;&#1093;&#1199;&#1081;&#1090;&#1101;&#1085;&quot;"/>
+                                                <assign variable="advice" expression="&quot;&#1047;&#1091;&#1079;&#1072;&#1072;&#1085;&#1082;&#1091;&#1088;&#1090;&#1080;&#1082;&#1257;&#1084;&#1089;&#1257;&#1093;&quot;"/>
+                                            </then>
+                                            <else>
+                                                <assign variable="category" expression="&quot;&#1058;&#1101;&#1089;&#1093;&#1199;&#1081;&#1090;&#1101;&#1085;&quot;"/>
+                                                <assign variable="advice" expression="&quot;&#1043;&#1101;&#1088;&#1101;&#1101;&#1089;&#1101;&#1101;&#1075;&#1072;&#1088;&#1072;&#1093;&#1075;&#1199;&#1081;&#1073;&#1072;&#1081;&#1093;&#1099;&#1075;&#1079;&#1257;&#1074;&#1083;&#1257;&#1077;&quot;"/>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <output expression="&quot;Day: &quot; &amp; day" newline="True"/>
+                <output expression="&quot;Temperature (C): &quot; &amp; temp" newline="True"/>
+                <output expression="&quot;Temperature (F): &quot; &amp; fahrenheit" newline="True"/>
+                <output expression="&quot;Category: &quot; &amp; category" newline="True"/>
+                <output expression="&quot;Advice: &quot; &amp; advice" newline="True"/>
+            </for>
+            <output expression="&quot;Lowest temperature: &quot; &amp; minTemp &amp; &quot; C&quot;" newline="True"/>
+            <output expression="&quot;Coldest day: &quot; &amp; coldestDay" newline="True"/>
+        </body>
+    </function>
+    <function name="ShowTitle" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;7 &#1093;&#1086;&#1085;&#1086;&#1075;&#1080;&#1081;&#1085; &#1094;&#1072;&#1075; &#1072;&#1075;&#1072;&#1072;&#1088;&#1099;&#1085; &#1090;&#1072;&#1081;&#1083;&#1072;&#1085;&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
