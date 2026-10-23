@@ -16,18 +16,23 @@ int main() {
 
         if (temp >= 0) {
             printf("Dulaahan\n");
+            printf("Nimgen tsamts umsuurei\n");
         }
         else if (temp >= -10) {
             printf("Seruuhen\n");
+            printf("Dulaan tsamts umsuurei\n");
         }
         else if (temp >= -20) {
             printf("Huiten\n");
+            printf("Hurem umsuurei\n");
         }
         else if (temp >= -30) {
             printf("Mash huiten\n");
+            printf("Zuzaan kurtik umsuurei\n");
         }
         else {
             printf("Tes huiten\n");
+            printf("Gerees garahgui baihig zuvluj baina\n");
         }
     }
 
