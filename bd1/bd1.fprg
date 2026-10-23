@@ -4,9 +4,9 @@
         <attribute name="name" value="bd1"/>
         <attribute name="authors" value="Dell"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2026-10-23 10:40:47 PM"/>
+        <attribute name="saved" value="2026-10-23 10:46:24 PM"/>
         <attribute name="created" value="RGVsbDtERVNLVE9QLU5PRkoxSzg7MjAyNi0xMC0yMzswNToyNDowNSBQTTsyNzI1"/>
-        <attribute name="edited" value="RGVsbDtERVNLVE9QLU5PRkoxSzg7MjAyNi0xMC0yMzsxMDo0MDo0NyBQTTsxOzI4MzM="/>
+        <attribute name="edited" value="RGVsbDtERVNLVE9QLU5PRkoxSzg7MjAyNi0xMC0yMzsxMDo0NjoyNCBQTTsyOzI4MzU="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -74,11 +74,7 @@
                         </if>
                     </else>
                 </if>
-                <output expression="&quot;Day: &quot; &amp; day" newline="True"/>
-                <output expression="&quot;Temperature (C): &quot; &amp; temp" newline="True"/>
-                <output expression="&quot;Temperature (F): &quot; &amp; fahrenheit" newline="True"/>
-                <output expression="&quot;Category: &quot; &amp; category" newline="True"/>
-                <output expression="&quot;Advice: &quot; &amp; advice" newline="True"/>
+                <output expression="day &amp; &quot; | &quot; &amp; temp &amp; &quot; | &quot; &amp; fahrenheit &amp; &quot; | &quot; &amp; category &amp; &quot; | &quot; &amp; advice" newline="True"/>
             </for>
             <output expression="&quot;Lowest temperature: &quot; &amp; minTemp &amp; &quot; C&quot;" newline="True"/>
             <output expression="&quot;Coldest day: &quot; &amp; coldestDay" newline="True"/>
