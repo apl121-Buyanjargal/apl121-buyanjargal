@@ -11,7 +11,8 @@ int main() {
 
     ShowTitle();
 
-    printf("Day | Celsius | Fahrenheit | Category | Advice\n");
+    printf("%-5s | %8s | %10s | %-12s | %-25s\n",
+           "Day", "Celsius", "Fahrenheit", "Category", "Advice");
 
     for (day = 1; day <= 7; day++) {
 
@@ -37,24 +38,24 @@ int main() {
         fahrenheit = temp * 9 / 5 + 32;
 
         if (temp >= 0) {
-            printf("%d | %.1f | %.1f | Dulaahan | Nimgen tsamts\n",
-                   day, temp, fahrenheit);
+            printf("%-5d | %8.1f | %10.1f | %-12s | %-25s\n",
+                   day, temp, fahrenheit, "Dulaahan", "Nimgen tsamts");
         }
-        else if (temp >= -10) {
-            printf("%d | %.1f | %.1f | Seruuhen | Dulaan tsamts\n",
-                   day, temp, fahrenheit);
+        else if (temp >= -10 && temp < 0) {
+            printf("%-5d | %8.1f | %10.1f | %-12s | %-25s\n",
+                   day, temp, fahrenheit, "Seruuhen", "Dulaan tsamts");
         }
         else if (temp >= -20) {
-            printf("%d | %.1f | %.1f | Huiten | Hurem\n",
-                   day, temp, fahrenheit);
+            printf("%-5d | %8.1f | %10.1f | %-12s | %-25s\n",
+                   day, temp, fahrenheit, "Huiten", "Hurem");
         }
         else if (temp >= -30) {
-            printf("%d | %.1f | %.1f | Mash huiten | Zuzaan kurtik\n",
-                   day, temp, fahrenheit);
+            printf("%-5d | %8.1f | %10.1f | %-12s | %-25s\n",
+                   day, temp, fahrenheit, "Mash huiten", "Zuzaan kurtik");
         }
         else {
-            printf("%d | %.1f | %.1f | Tes huiten | Gerees garahgui baih\n",
-                   day, temp, fahrenheit);
+            printf("%-5d | %8.1f | %10.1f | %-12s | %-25s\n",
+                   day, temp, fahrenheit, "Tes huiten", "Gerees garahgui baih");
         }
     }
 
