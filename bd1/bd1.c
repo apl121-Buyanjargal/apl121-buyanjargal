@@ -2,14 +2,23 @@
 #include <stdio.h>
 
 int main() {
-    int day;
-    float temp, fahrenheit;
+    int day, coldestDay;
+    float temp, fahrenheit, minTemp;
 
     printf("7 honogiin tsag agaariin tailan\n");
 
     for (day = 1; day <= 7; day++) {
         printf("Day %d: ", day);
         scanf("%f", &temp);
+
+        if (day == 1) {
+            minTemp = temp;
+            coldestDay = day;
+        }
+        else if (temp < minTemp) {
+            minTemp = temp;
+            coldestDay = day;
+        }
 
         fahrenheit = temp * 9 / 5 + 32;
         printf("Fahrenheit: %.1f\n", fahrenheit);
@@ -35,6 +44,9 @@ int main() {
             printf("Gerees garahgui baihig zuvluj baina\n");
         }
     }
+
+    printf("\nHamgiin huiten temperature: %.1f C\n", minTemp);
+    printf("Hamgiin huiten udur: %d\n", coldestDay);
 
     return 0;
 }
