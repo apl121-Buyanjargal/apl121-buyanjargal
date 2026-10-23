@@ -8,8 +8,16 @@ int main() {
     printf("7 honogiin tsag agaariin tailan\n");
 
     for (day = 1; day <= 7; day++) {
-        printf("Day %d: ", day);
-        scanf("%f", &temp);
+
+        do {
+            printf("Day %d: ", day);
+            scanf("%f", &temp);
+
+            if (temp < -60 || temp > 50) {
+                printf("Buruu temperature. Dahin oruulna uu.\n");
+            }
+
+        } while (temp < -60 || temp > 50);
 
         if (day == 1) {
             minTemp = temp;
