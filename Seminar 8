@@ -1,0 +1,1171 @@
+========== БОДЛОГО 1 ==========
+#include <stdio.h>
+
+int main() {
+    int n, a[100];
+
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    for (int i = 0; i < n; i++) {
+        if (i > 0) printf(" ");
+        printf("%d", a[i]);
+    }
+
+    printf("\n");
+    return 0;
+}
+
+========== БОДЛОГО 2 ==========
+#include <stdio.h>
+
+int main() {
+    int n, a[100];
+
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    for (int i = n - 1; i >= 0; i--) {
+        printf("%d", a[i]);
+        if (i > 0) printf(" ");
+    }
+
+    printf("\n");
+    return 0;
+}
+
+========== БОДЛОГО 3 ==========
+#include <stdio.h>
+
+int main() {
+    int n, a[100];
+    int sum = 0;
+
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    for (int i = 0; i < n; i++) {
+        sum += a[i];
+    }
+
+    printf("%d\n", sum);
+
+    return 0;
+}
+
+========== БОДЛОГО 4 ==========
+#include <stdio.h>
+
+int main() {
+    int n, a[100];
+    int sum = 0;
+    double avg;
+
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    for (int i = 0; i < n; i++) {
+        sum += a[i];
+    }
+
+    avg = (double)sum / n;
+
+    printf("%.2f\n", avg);
+
+    return 0;
+}
+
+========== БОДЛОГО 5 ==========
+#include <stdio.h>
+
+int main() {
+    int n, a[100];
+    int max;
+
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    max = a[0];
+
+    for (int i = 1; i < n; i++) {
+        if (a[i] > max) {
+            max = a[i];
+        }
+    }
+
+    printf("%d\n", max);
+
+    return 0;
+}
+
+========== БОДЛОГО 6 ==========
+#include <stdio.h>
+
+int main() {
+    int n, a[100];
+    int min, index = 0;
+
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    min = a[0];
+
+    for (int i = 1; i < n; i++) {
+        if (a[i] < min) {
+            min = a[i];
+            index = i;
+        }
+    }
+
+    printf("%d %d\n", min, index);
+
+    return 0;
+}
+
+========== БОДЛОГО 7 ==========
+#include <stdio.h>
+
+int main() {
+    int n, a[100];
+
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    for (int i = 0; i < n; i += 2) {
+        if (i > 0) printf(" ");
+        printf("%d", a[i]);
+    }
+
+    printf("\n");
+
+    return 0;
+}
+
+========== БОДЛОГО 8 ==========
+#include <stdio.h>
+
+int main() {
+    int n, a[100];
+    int positive = 0, negative = 0, zero = 0;
+
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    for (int i = 0; i < n; i++) {
+        if (a[i] > 0) {
+            positive++;
+        }
+        else if (a[i] < 0) {
+            negative++;
+        }
+        else {
+            zero++;
+        }
+    }
+
+    printf("%d %d %d\n", positive, negative, zero);
+
+    return 0;
+}
+
+========== БОДЛОГО 9 ==========
+#include <stdio.h>
+
+int main() {
+    int n, a[100];
+    int count = 0;
+
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    for (int i = 0; i < n; i++) {
+        if (a[i] % 2 == 0) {
+            if (count > 0) printf(" ");
+            printf("%d", a[i]);
+            count++;
+        }
+    }
+
+    if (count == 0) {
+        printf("NONE");
+    }
+
+    printf("\n");
+
+    return 0;
+}
+
+========== БОДЛОГО 10 ==========
+#include <stdio.h>
+
+int main() {
+    int n, a[100];
+
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    for (int i = 0; i < n; i++) {
+        a[i] = a[i] * 2;
+    }
+
+    for (int i = 0; i < n; i++) {
+        if (i > 0) printf(" ");
+        printf("%d", a[i]);
+    }
+
+    printf("\n");
+
+    return 0;
+}
+
+========== БОДЛОГО 11 ==========
+#include <stdio.h>
+
+int main() {
+    int n, a[100];
+    int sum = 0, count = 0;
+    double avg;
+
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    for (int i = 0; i < n; i++) {
+        sum += a[i];
+    }
+
+    avg = (double)sum / n;
+
+    for (int i = 0; i < n; i++) {
+        if (a[i] > avg) {
+            count++;
+        }
+    }
+
+    printf("%d\n", count);
+
+    return 0;
+}
+
+========== БОДЛОГО 12 ==========
+#include <stdio.h>
+
+int main() {
+    int n, a[100], key;
+    int index = -1;
+
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    scanf("%d", &key);
+
+    for (int i = 0; i < n; i++) {
+        if (a[i] == key) {
+            index = i;
+            break;
+        }
+    }
+
+    printf("%d\n", index);
+
+    return 0;
+}
+
+========== БОДЛОГО 13 ==========
+#include <stdio.h>
+
+int main() {
+    int n, a[100], key;
+    int count = 0;
+
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    scanf("%d", &key);
+
+    for (int i = 0; i < n; i++) {
+        if (a[i] == key) {
+            count++;
+        }
+    }
+
+    printf("%d\n", count);
+
+    return 0;
+}
+
+========== БОДЛОГО 14 ==========
+#include <stdio.h>
+
+int main() {
+    int n, a[100], key;
+    int index = -1;
+
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    scanf("%d", &key);
+
+    for (int i = n - 1; i >= 0; i--) {
+        if (a[i] == key) {
+            index = i;
+            break;
+        }
+    }
+
+    printf("%d\n", index);
+
+    return 0;
+}
+
+========== БОДЛОГО 15 ==========
+#include <stdio.h>
+
+int main() {
+    int n, a[100];
+    int max, min;
+
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    max = a[0];
+    min = a[0];
+
+    for (int i = 1; i < n; i++) {
+        if (a[i] > max) {
+            max = a[i];
+        }
+        if (a[i] < min) {
+            min = a[i];
+        }
+    }
+
+    printf("%d\n", max - min);
+
+    return 0;
+}
+
+========== БОДЛОГО 16 ==========
+#include <stdio.h>
+
+int main() {
+    int n, a[100];
+    int max, second, found = 0;
+
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    max = a[0];
+
+    for (int i = 1; i < n; i++) {
+        if (a[i] > max) {
+            max = a[i];
+        }
+    }
+
+    for (int i = 0; i < n; i++) {
+        if (a[i] < max) {
+            if (found == 0 || a[i] > second) {
+                second = a[i];
+                found = 1;
+            }
+        }
+    }
+
+    if (found == 1) {
+        printf("%d\n", second);
+    } else {
+        printf("NONE\n");
+    }
+
+    return 0;
+}
+
+========== БОДЛОГО 17 ==========
+#include <stdio.h>
+
+int main() {
+    int n, a[100];
+    int sorted = 1;
+
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    for (int i = 1; i < n; i++) {
+        if (a[i] < a[i - 1]) {
+            sorted = 0;
+            break;
+        }
+    }
+
+    if (sorted == 1) {
+        printf("YES\n");
+    } else {
+        printf("NO\n");
+    }
+
+    return 0;
+}
+
+========== БОДЛОГО 18 ==========
+#include <stdio.h>
+
+int main() {
+    int n, a[100];
+    int check = 1;
+
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    for (int i = 0; i < n / 2; i++) {
+        if (a[i] != a[n - 1 - i]) {
+            check = 0;
+            break;
+        }
+    }
+
+    if (check == 1) {
+        printf("YES\n");
+    } else {
+        printf("NO\n");
+    }
+
+    return 0;
+}
+
+========== БОДЛОГО 19 ==========
+#include <stdio.h>
+
+int main() {
+    int n, a[100];
+    int i, j, tmp;
+
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    i = 0;
+    j = n - 1;
+
+    while (i < j) {
+        tmp = a[i];
+        a[i] = a[j];
+        a[j] = tmp;
+
+        i++;
+        j--;
+    }
+
+    for (int i = 0; i < n; i++) {
+        if (i > 0) printf(" ");
+        printf("%d", a[i]);
+    }
+
+    printf("\n");
+
+    return 0;
+}
+
+========== БОДЛОГО 20 ==========
+#include <stdio.h>
+
+int main() {
+    int n, a[100];
+    int first;
+
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    first = a[0];
+
+    for (int i = 0; i < n - 1; i++) {
+        a[i] = a[i + 1];
+    }
+
+    a[n - 1] = first;
+
+    for (int i = 0; i < n; i++) {
+        if (i > 0) printf(" ");
+        printf("%d", a[i]);
+    }
+
+    printf("\n");
+
+    return 0;
+}
+
+========== БОДЛОГО 21 ==========
+#include <stdio.h>
+
+int main() {
+    int n, a[100], b[100], k;
+
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    scanf("%d", &k);
+
+    k = k % n;
+
+    for (int i = 0; i < n; i++) {
+        b[(i + k) % n] = a[i];
+    }
+
+    for (int i = 0; i < n; i++) {
+        if (i > 0) printf(" ");
+        printf("%d", b[i]);
+    }
+
+    printf("\n");
+
+    return 0;
+}
+
+========== БОДЛОГО 22 ==========
+#include <stdio.h>
+
+int main() {
+    int n, a[100];
+    int sum = 0;
+
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    for (int i = 0; i < n; i++) {
+        sum += a[i];
+        a[i] = sum;
+    }
+
+    for (int i = 0; i < n; i++) {
+        if (i > 0) printf(" ");
+        printf("%d", a[i]);
+    }
+
+    printf("\n");
+
+    return 0;
+}
+
+========== БОДЛОГО 23 ==========
+#include <stdio.h>
+
+int main() {
+    int n, a[100];
+    int count = 0;
+
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    for (int i = 1; i < n - 1; i++) {
+        if (a[i] > a[i - 1] && a[i] > a[i + 1]) {
+            count++;
+        }
+    }
+
+    printf("%d\n", count);
+
+    return 0;
+}
+
+========== БОДЛОГО 24 ==========
+#include <stdio.h>
+
+int main() {
+    int n, a[100];
+    int minIndex = 0, maxIndex = 0;
+    int temp;
+
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    for (int i = 1; i < n; i++) {
+        if (a[i] < a[minIndex]) {
+            minIndex = i;
+        }
+        if (a[i] > a[maxIndex]) {
+            maxIndex = i;
+        }
+    }
+
+    temp = a[minIndex];
+    a[minIndex] = a[maxIndex];
+    a[maxIndex] = temp;
+
+    for (int i = 0; i < n; i++) {
+        if (i > 0) printf(" ");
+        printf("%d", a[i]);
+    }
+
+    printf("\n");
+
+    return 0;
+}
+
+========== БОДЛОГО 25 ==========
+#include <stdio.h>
+
+int main() {
+    int n;
+    long long a[100], b[100];
+    long long sum = 0;
+
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        scanf("%lld", &a[i]);
+    }
+
+    for (int i = 0; i < n; i++) {
+        scanf("%lld", &b[i]);
+    }
+
+    for (int i = 0; i < n; i++) {
+        sum += a[i] * b[i];
+    }
+
+    printf("%lld\n", sum);
+
+    return 0;
+}
+
+========== БОДЛОГО 26 ==========
+#include <stdio.h>
+
+int main() {
+    int n, a[100], b[100], c[100];
+
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &b[i]);
+    }
+
+    for (int i = 0; i < n; i++) {
+        c[i] = a[i] + b[i];
+    }
+
+    for (int i = 0; i < n; i++) {
+        if (i > 0) printf(" ");
+        printf("%d", c[i]);
+    }
+
+    printf("\n");
+
+    return 0;
+}
+
+========== БОДЛОГО 27 ==========
+#include <stdio.h>
+
+int main() {
+    int n, a[100], K;
+    int count = 0;
+
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    scanf("%d", &K);
+
+    for (int i = 0; i < n; i++) {
+        for (int j = i + 1; j < n; j++) {
+            if (a[i] + a[j] == K) {
+                count++;
+            }
+        }
+    }
+
+    printf("%d\n", count);
+
+    return 0;
+}
+
+========== БОДЛОГО 28 ==========
+#include <stdio.h>
+
+int main() {
+    int n, a[100];
+    int count = 0;
+
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    for (int i = 0; i < n; i++) {
+        int found = 0;
+
+        for (int j = 0; j < i; j++) {
+            if (a[i] == a[j]) {
+                found = 1;
+                break;
+            }
+        }
+
+        if (found == 0) {
+            if (count > 0) printf(" ");
+            printf("%d", a[i]);
+            count++;
+        }
+    }
+
+    printf("\n");
+
+    return 0;
+}
+
+========== БОДЛОГО 29 ==========
+#include <stdio.h>
+
+int main() {
+    int n, a[100];
+    int cnt[11] = {0};
+
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    for (int i = 0; i < n; i++) {
+        cnt[a[i]]++;
+    }
+
+    for (int i = 0; i <= 10; i++) {
+        if (cnt[i] > 0) {
+            printf("%d %d\n", i, cnt[i]);
+        }
+    }
+
+    return 0;
+}
+
+========== БОДЛОГО 30 ==========
+#include <stdio.h>
+
+int main() {
+    int n, a[100], p, x;
+
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    scanf("%d %d", &p, &x);
+
+    for (int i = n; i > p; i--) {
+        a[i] = a[i - 1];
+    }
+
+    a[p] = x;
+    n++;
+
+    for (int i = 0; i < n; i++) {
+        if (i > 0) printf(" ");
+        printf("%d", a[i]);
+    }
+
+    printf("\n");
+
+    return 0;
+}
+
+========== БОДЛОГО 31 ==========
+#include <stdio.h>
+
+int main() {
+    int r, c, m[10][10], t[10][10];
+
+    scanf("%d %d", &r, &c);
+
+    for (int i = 0; i < r; i++) {
+        for (int j = 0; j < c; j++) {
+            scanf("%d", &m[i][j]);
+        }
+    }
+
+    for (int i = 0; i < r; i++) {
+        for (int j = 0; j < c; j++) {
+            t[j][i] = m[i][j];
+        }
+    }
+
+    for (int i = 0; i < c; i++) {
+        for (int j = 0; j < r; j++) {
+            if (j > 0) printf(" ");
+            printf("%d", t[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+========== БОДЛОГО 32 ==========
+#include <stdio.h>
+
+int main() {
+    int r, c, a[10][10];
+
+    scanf("%d %d", &r, &c);
+
+    for (int i = 0; i < r; i++) {
+        for (int j = 0; j < c; j++) {
+            scanf("%d", &a[i][j]);
+        }
+    }
+
+    for (int i = 0; i < r; i++) {
+        int sum = 0;
+        for (int j = 0; j < c; j++) {
+            sum += a[i][j];
+        }
+        if (i > 0) printf(" ");
+        printf("%d", sum);
+    }
+    printf("\n");
+
+    for (int j = 0; j < c; j++) {
+        int sum = 0;
+        for (int i = 0; i < r; i++) {
+            sum += a[i][j];
+        }
+        if (j > 0) printf(" ");
+        printf("%d", sum);
+    }
+    printf("\n");
+
+    return 0;
+}
+
+========== БОДЛОГО 33 ==========
+#include <stdio.h>
+
+int main() {
+    int n, m[10][10];
+    int sum1 = 0, sum2 = 0;
+
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            scanf("%d", &m[i][j]);
+        }
+    }
+
+    for (int i = 0; i < n; i++) {
+        sum1 += m[i][i];
+        sum2 += m[i][n - 1 - i];
+    }
+
+    printf("%d %d\n", sum1, sum2);
+
+    return 0;
+}
+
+========== БОДЛОГО 34 ==========
+#include <stdio.h>
+
+int main() {
+    int r, c, a[10][10];
+    int max, row = 0, col = 0;
+
+    scanf("%d %d", &r, &c);
+
+    for (int i = 0; i < r; i++) {
+        for (int j = 0; j < c; j++) {
+            scanf("%d", &a[i][j]);
+        }
+    }
+
+    max = a[0][0];
+
+    for (int i = 0; i < r; i++) {
+        for (int j = 0; j < c; j++) {
+            if (a[i][j] > max) {
+                max = a[i][j];
+                row = i;
+                col = j;
+            }
+        }
+    }
+
+    printf("%d %d %d\n", max, row, col);
+
+    return 0;
+}
+
+========== БОДЛОГО 35 ==========
+#include <stdio.h>
+
+int main() {
+    int n, m[10][10];
+    int check = 1;
+
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            scanf("%d", &m[i][j]);
+        }
+    }
+
+    for (int i = 0; i < n; i++) {
+        for (int j = i + 1; j < n; j++) {
+            if (m[i][j] != m[j][i]) {
+                check = 0;
+                break;
+            }
+        }
+        if (check == 0) break;
+    }
+
+    if (check == 1) {
+        printf("YES\n");
+    } else {
+        printf("NO\n");
+    }
+
+    return 0;
+}
+
+========== БОДЛОГО 36 ==========
+#include <stdio.h>
+
+int main() {
+    int r, c;
+    int a[10][10], b[10][10], sum[10][10];
+
+    scanf("%d %d", &r, &c);
+
+    for (int i = 0; i < r; i++) {
+        for (int j = 0; j < c; j++) {
+            scanf("%d", &a[i][j]);
+        }
+    }
+
+    for (int i = 0; i < r; i++) {
+        for (int j = 0; j < c; j++) {
+            scanf("%d", &b[i][j]);
+        }
+    }
+
+    for (int i = 0; i < r; i++) {
+        for (int j = 0; j < c; j++) {
+            sum[i][j] = a[i][j] + b[i][j];
+        }
+    }
+
+    for (int i = 0; i < r; i++) {
+        for (int j = 0; j < c; j++) {
+            if (j > 0) printf(" ");
+            printf("%d", sum[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+========== БОДЛОГО 37 ==========
+#include <stdio.h>
+
+int main() {
+    int n, a[100], temp;
+
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - 1 - i; j++) {
+            if (a[j] > a[j + 1]) {
+                temp = a[j];
+                a[j] = a[j + 1];
+                a[j + 1] = temp;
+            }
+        }
+    }
+
+    for (int i = 0; i < n; i++) {
+        if (i > 0) printf(" ");
+        printf("%d", a[i]);
+    }
+
+    printf("\n");
+
+    return 0;
+}
+
+========== БОДЛОГО 38 ==========
+#include <stdio.h>
+
+int main() {
+    int n, a[100];
+    int count = 1, max = 1;
+
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    for (int i = 1; i < n; i++) {
+        if (a[i] > a[i - 1]) {
+            count++;
+        } else {
+            count = 1;
+        }
+
+        if (count > max) {
+            max = count;
+        }
+    }
+
+    printf("%d\n", max);
+
+    return 0;
+}
+
+========== БОДЛОГО 39 ==========
+#include <stdio.h>
+
+int main() {
+    int n, a[100];
+    int maxSum, sum;
+
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    maxSum = a[0];
+
+    for (int i = 0; i < n; i++) {
+        sum = 0;
+
+        for (int j = i; j < n; j++) {
+            sum += a[j];
+
+            if (sum > maxSum) {
+                maxSum = sum;
+            }
+        }
+    }
+
+    printf("%d\n", maxSum);
+
+    return 0;
+}
+
+========== БОДЛОГО 40 ==========
+#include <stdio.h>
+
+int main() {
+    int N;
+    int composite[1001] = {0};
+    int count = 0;
+
+    scanf("%d", &N);
+
+    for (int p = 2; p * p <= N; p++) {
+        if (composite[p] == 0) {
+            for (int j = p * p; j <= N; j += p) {
+                composite[j] = 1;
+            }
+        }
+    }
+
+    for (int i = 2; i <= N; i++) {
+        if (composite[i] == 0) {
+            if (count > 0) printf(" ");
+            printf("%d", i);
+            count++;
+        }
+    }
+
+    printf("\n");
+
+    return 0;
+}
