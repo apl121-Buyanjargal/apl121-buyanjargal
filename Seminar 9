@@ -278,3 +278,128 @@ void fill_squares(int a[], int n) {
         a[i] = i * i;
     }
 }
+// Bodlogo 31
+int is_prime(int n) {
+    if (n < 2)
+        return 0;
+
+    for (int i = 2; i <= n / i; i++) {
+        if (n % i == 0)
+            return 0;
+    }
+    return 1;
+}
+
+int next_prime(int n) {
+    int num = n + 1;
+
+    while (!is_prime(num)) {
+        num++;
+    }
+    return num;
+}
+
+// Bodlogo 32
+int count_primes(int a, int b) {
+    int count = 0;
+
+    for (int i = a; i <= b; i++) {
+        if (is_prime(i))
+            count++;
+    }
+    return count;
+}
+
+// Bodlogo 33
+int binary_to_decimal(long long b) {
+    int decimal = 0;
+    int power = 1;
+
+    while (b > 0) {
+        decimal += (b % 10) * power;
+        power *= 2;
+        b /= 10;
+    }
+
+    return decimal;
+}
+
+// Bodlogo 34
+long long decimal_to_binary(int n) {
+    long long binary = 0;
+    long long place = 1;
+
+    while (n > 0) {
+        binary += (n % 2) * place;
+        n /= 2;
+        place *= 10;
+    }
+
+    return binary;
+}
+
+// Bodlogo 35
+void print_triangle(int n) {
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= i; j++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+
+// Bodlogo 36
+long long fib(int n) {
+    if (n == 0)
+        return 0;
+
+    long long a = 0, b = 1;
+
+    for (int i = 2; i <= n; i++) {
+        long long temp = a + b;
+        a = b;
+        b = temp;
+    }
+
+    return b;
+}
+
+// Bodlogo 37
+int is_armstrong(int n) {
+    if (n < 0)
+        return 0;
+
+    int temp = n;
+    int k = 0;
+    long long sum = 0;
+
+    do {
+        k++;
+        temp /= 10;
+    } while (temp > 0);
+
+    temp = n;
+
+    do {
+        int digit = temp % 10;
+        long long power = 1;
+
+        for (int i = 0; i < k; i++) {
+            power *= digit;
+        }
+
+        sum += power;
+        temp /= 10;
+    } while (temp > 0);
+
+    return sum == n ? 1 : 0;
+}
+
+// Bodlogo 38
+void reverse_array(int a[], int n) {
+    for (int i = 0; i < n / 2; i++) {
+        int temp = a[i];
+        a[i] = a[n - 1 - i];
+        a[n - 1 - i] = temp;
+    }
+}
