@@ -72,3 +72,103 @@ int last_digit(int n) {
         digit = -digit;
     return digit;
 }
+
+// Bodlogo 11
+int sum_to(int n) {
+    int sum = 0;
+    for (int i = 1; i <= n; i++) {
+        sum += i;
+    }
+    return sum;
+}
+
+// Bodlogo 12
+long long factorial(int n) {
+    long long result = 1;
+    for (int i = 1; i <= n; i++) {
+        result *= i;
+    }
+    return result;
+}
+
+// Bodlogo 13
+int is_prime(int n) {
+    if (n < 2)
+        return 0;
+    for (int i = 2; i <= n / i; i++) {
+        if (n % i == 0)
+            return 0;
+    }
+    return 1;
+}
+
+// Bodlogo 14
+int count_digits(int n) {
+    int count = 0;
+    do {
+        count++;
+        n /= 10;
+    } while (n != 0);
+    return count;
+}
+
+// Bodlogo 15
+int digit_sum(int n) {
+    int sum = 0;
+    while (n > 0) {
+        sum += n % 10;
+        n /= 10;
+    }
+    return sum;
+}
+
+// Bodlogo 16
+int reverse_number(int n) {
+    int reversed = 0;
+    while (n > 0) {
+        reversed = reversed * 10 + n % 10;
+        n /= 10;
+    }
+    return reversed;
+}
+
+// Bodlogo 17
+int is_palindrome(int n) {
+    int original = n;
+    int reversed = 0;
+
+    while (n > 0) {
+        reversed = reversed * 10 + n % 10;
+        n /= 10;
+    }
+
+    if (original == reversed)
+        return 1;
+    else
+        return 0;
+}
+
+// Bodlogo 18
+int gcd(int a, int b) {
+    while (b != 0) {
+        int temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a;
+}
+
+// Bodlogo 19
+// gcd функц дээр тодорхойлогдсон.
+long long lcm(int a, int b) {
+    return (long long)(a / gcd(a, b)) * b;
+}
+
+// Bodlogo 20
+long long power(int base, int exp) {
+    long long result = 1;
+    for (int i = 0; i < exp; i++) {
+        result *= base;
+    }
+    return result;
+}
